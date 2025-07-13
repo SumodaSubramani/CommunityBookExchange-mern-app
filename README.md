@@ -4,9 +4,9 @@ BookExchange is a dynamic and feature-rich web application built with the MERN s
 
 ## Live Demo
 
-*(Once you deploy your application, you can put the live URL here! For now, you can leave this section out or point to a video.)*
+[![BookExchange Demo Thumbnail](https://user-images.githubusercontent.com/139045863/293503254-20a2323f-e53b-47e0-b6f7-c91f543666b4.png)](https://youtu.be/BrB_dtJzFro)
 
----
+**[Click here to watch the full project demo on YouTube!](https://youtu.be/BrB_dtJzFro)**
 
 ## Key Features
 
