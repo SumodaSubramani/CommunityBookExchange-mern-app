@@ -1,0 +1,68 @@
+.chat-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.chat-modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+}
+
+.chat-modal-header {
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-modal-body {
+  padding: 1rem;
+  overflow-y: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.chat-modal-footer {
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.message-bubble {
+  padding: 0.6rem 1rem;
+  border-radius: 18px;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+
+.message-bubble.sent {
+  background-color: var(--custom-gray); 
+  color: white;
+  align-self: flex-end;
+}
+
+.message-bubble.received {
+  background-color: #e9ecef;
+  color: #212529;
+  align-self: flex-start;
+}
+
+.message-bubble p { margin: 0; }
+.message-bubble strong { font-size: 0.8rem; display: block; margin-bottom: 0.2rem; opacity: 0.9; }
+.message-bubble .timestamp { font-size: 0.7rem; display: block; text-align: right; margin-top: 0.3rem; opacity: 0.7; }

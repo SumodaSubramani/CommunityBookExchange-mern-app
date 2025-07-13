@@ -1,0 +1,86 @@
+:root {
+  
+  --bs-primary: #0d6efd;
+  --bs-primary-rgb: 13, 110, 253;
+
+  --custom-gray: #495057;
+  --custom-gray-hover: #343a40;
+  
+  --bs-secondary: #6c757d;
+  --bs-light: #f8f9fa;
+  
+  --bs-body-font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
+}
+
+body, .btn, .form-control, .form-select, .card, .table, h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive !important;
+}
+
+body {
+  background-color: var(--bs-light);
+}
+
+.card-ui {
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-ui:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.image-overlay-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.image-overlay-content {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.image-overlay-container:hover .image-overlay-content {
+  opacity: 1;
+}
+
+.navbar .dropdown-toggle::after {
+  display: none;
+}
+
+
+.btn-primary {
+  background-color: var(--custom-gray);
+  border-color: var(--custom-gray);
+}
+.btn-primary:hover {
+  background-color: var(--custom-gray-hover);
+  border-color: var(--custom-gray-hover);
+}
+.btn-primary:focus, .btn-primary:active {
+  background-color: var(--custom-gray-hover) !important;
+  border-color: var(--custom-gray-hover) !important;
+  box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.5) !important;
+}
+
+.btn-secondary:hover {
+  background-color: #212529;
+  border-color: #212529;
+}
+.btn-secondary:focus, .btn-secondary:active {
+  background-color: #212529 !important;
+  border-color: #212529 !important;
+  box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5) !important;
+}
+
+.dropdown-item:active {
+  background-color: #e9ecef; 
+  color: #1e2125; 
+}
