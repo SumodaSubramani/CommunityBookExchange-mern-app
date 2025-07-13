@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# BookExchange - A Full-Stack MERN Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+BookExchange is a dynamic and feature-rich web application built with the MERN stack, designed to create a community for book lovers to lend, sell, and discover new books. This project demonstrates a complete full-stack development cycle, from backend API design and database management to a responsive, interactive frontend and real-time communication.
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+*(Once you deploy your application, you can put the live URL here! For now, you can leave this section out or point to a video.)*
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Key Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Full User Authentication:** Secure user registration and login system using JSON Web Tokens (JWT) and `bcrypt.js` for password hashing.
+- **Book Listings (CRUD):** Users can create, read, and delete their book listings. The system supports both "Lend" and "Sell" types, complete with pricing.
+- **Cloud Image Uploads:** Book cover images are a mandatory field for new listings, handled seamlessly using `multer` and stored permanently on **Cloudinary**.
+- **Request & Delivery System:** A comprehensive transaction lifecycle where users can request books, and owners can accept or reject. An integrated "Mark as Delivered" feature updates the book's status to "exchanged," removing it from public listings to maintain data accuracy.
+- **Real-Time In-App Chat:** Upon a request being accepted, a private chat room is created between the owner and the requester using **Socket.IO**, allowing users to coordinate the exchange directly on the platform.
+- **User Dashboards & Management:**
+    - **My Requests:** A dedicated page showing incoming and outgoing requests with their statuses.
+    - **My Books:** A private page where users can view and manage all their listed books.
+    - **Profile Dropdown:** A clean UI element showing the logged-in user's name with quick access to their listings and the logout function.
+- **Interactive & Responsive UI:**
+    - A responsive interface built with **React** and styled with **Bootstrap** for a consistent experience on all devices.
+    - Interactive book cards with a hover-to-reveal condition feature.
+    - Non-blocking toast notifications for a smooth user experience.
+    - Professional confirmation modals for critical actions like deleting a book.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology Stack
 
-### `npm run build`
+- **Frontend:** React, React Router, Socket.IO Client
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB with Mongoose
+- **Real-Time Communication:** Socket.IO
+- **Authentication:** JSON Web Tokens (JWT), bcrypt.js
+- **Image Handling:** Cloudinary (Cloud Storage), Multer (Middleware)
+- **Styling:** Bootstrap 5
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Local Setup and Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project on your local machine, follow these steps:
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Node.js installed
+- npm or yarn installed
+- MongoDB installed and running locally
+- A free Cloudinary account for image storage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Backend Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1.  Navigate to the `backend` directory:
+    ```bash
+    cd backend
+    ```
+2.  Install the dependencies:
+    ```bash
+    npm install
+    ```
+3.  Create a `.env` file in the `backend` root and add your credentials:
+    ```
+    CLOUDINARY_CLOUD_NAME=your_cloud_name
+    CLOUDINARY_API_KEY=your_api_key
+    CLOUDINARY_API_SECRET=your_api_secret
+    ```
+4.  Start the backend server:
+    ```bash
+    npm run dev
+    ```
+    The server will be running on `http://localhost:5000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Frontend Setup
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1.  Open a new terminal and navigate to the `frontend` directory:
+    ```bash
+    cd frontend
+    ```
+2.  Install the dependencies:
+    ```bash
+    npm install
+    ```
+3.  Start the frontend development server:
+    ```bash
+    npm start
+    ```
+    The application will open in your browser at `http://localhost:3000`.
