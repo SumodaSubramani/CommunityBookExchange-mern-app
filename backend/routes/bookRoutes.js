@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
     
     console.log('[BACKEND-INFO] Using filter to find books:', filter); // DEBUG 3
 
-    const books = await Book.find(filter).populate('userId', 'username');
+    const books = await Book.find(filter).populate('userId', 'username ratings');
     
     console.log(`[BACKEND-INFO] Found ${books.length} books.`); // DEBUG 4
 

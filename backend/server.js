@@ -30,6 +30,7 @@ app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/books', require('./routes/bookRoutes'));
 app.use('/api/requests', require('./routes/requestRoutes'));
 app.use('/api/messages', require('./routes/messageRoutes'));
+app.use('/api/user', require('./routes/userRoutes'));
 
 io.on('connection', (socket) => {
   

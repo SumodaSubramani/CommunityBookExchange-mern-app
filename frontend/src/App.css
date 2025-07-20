@@ -84,3 +84,64 @@ body {
   background-color: #e9ecef; 
   color: #1e2125; 
 }
+
+.how-it-works-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  height: 100%;
+}
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem auto;
+  background-color: #e2e8f0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-circle img {
+  width: 40px;
+  height: 40px;
+}
+
+.stats-bar {
+  background-color: #fff;
+  padding: 2.5rem 0;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.stats-bar .stat-item h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--custom-gray);
+}
+.stats-bar .stat-item p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* --- Footer Styles --- */
+.app-footer {
+  background-color: #212529; /* Black background */
+}
+.footer-links {
+  margin: 0;
+  padding: 0;
+}
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+.footer-links a {
+  color: #adb5bd; /* Light gray text for links */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.footer-links a:hover {
+  color: #fff;
+}
+.footer-bottom {
+  border-top: 1px solid #343a40; /* Darker border */
+}
